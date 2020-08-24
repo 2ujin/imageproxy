@@ -102,6 +102,7 @@ func main() {
 
 	r := mux.NewRouter().SkipClean(true).UseEncodedPath()
 	r.PathPrefix("/").Handler(p)
+	fmt.Printf("시작합니다!")
 	fmt.Printf("imageproxy listening on %s\n", server.Addr)
 	log.Fatal(http.ListenAndServe(*addr, r))
 }
